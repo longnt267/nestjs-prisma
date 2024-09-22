@@ -29,3 +29,17 @@ export class RegisterDto {
   @IsNotEmpty()
   phone: string;
 }
+
+export class LoginDto {
+  @MaxLength(75)
+  @IsString()
+  @IsEmail()
+  @IsNotEmpty()
+  email: string;
+
+  @MaxLength(32)
+  @MinLength(6)
+  @IsString()
+  @IsNotEmpty()
+  password: string;
+}
